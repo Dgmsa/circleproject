@@ -1,8 +1,10 @@
-version: 2
-jobs:
-   build:
-     docker:
-       - image: circleci/python:2.7
-     steps:
-       - checkout
-       - run: echo "hello world"
+machine:
+  java:
+    version: openjdk8
+  timezone: America/Sao_Paulo # Set the timezone
+
+  deployment:
+    main:
+      branch: master
+      commands:
+        - mvn install 
