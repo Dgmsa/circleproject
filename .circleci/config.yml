@@ -3,8 +3,9 @@ machine:
     version: openjdk8
   timezone: America/Sao_Paulo # Set the timezone
 
-  deployment:
-    main:
-      branch: master
-      commands:
-        - mvn install 
+  test:
+    override:
+      - mvn clean install
+  general:
+    artifacts:
+      - "*.war"
