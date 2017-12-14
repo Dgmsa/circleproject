@@ -8,4 +8,4 @@ machine:
       - mvn clean install
   general:
     artifacts:
-      - "*.war"
+      - "target/*.war"
